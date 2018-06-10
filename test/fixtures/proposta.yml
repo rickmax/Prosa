@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  descricao: MyText
+  valor: 
+  inicio: 2018-06-10
+  fim: 2018-06-10
+  stado: MyString
+  cidade: MyString
+
+two:
+  nome: MyString
+  descricao: MyText
+  valor: 
+  inicio: 2018-06-10
+  fim: 2018-06-10
+  stado: MyString
+  cidade: MyString
