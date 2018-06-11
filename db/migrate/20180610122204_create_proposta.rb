@@ -6,7 +6,7 @@ class CreateProposta < ActiveRecord::Migration
       t.decimal :valor
       t.date :inicio
       t.date :fim
-      t.string :stado
+      t.string :estado
       t.string :cidade
 
       t.timestamps null: false

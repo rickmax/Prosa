@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20180610122204) do
     t.decimal  "valor",                    precision: 10
     t.date     "inicio"
     t.date     "fim"
-    t.string   "stado",      limit: 255
+    t.string   "estado",     limit: 255
     t.string   "cidade",     limit: 255
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false

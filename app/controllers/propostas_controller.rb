@@ -26,6 +26,7 @@ class PropostasController < ApplicationController
     @proposta = Propostum.new(proposta_params)
 
       if @proposta.save
+        @proposta.update(descricao: set_html_safe(proposta_params[:descricao]))
         render json: @propostas
       else
         render json: @propostas.errors
@@ -34,6 +35,7 @@ class PropostasController < ApplicationController
 
   def update
     if @proposta.update(proposta_params)
+      @proposta.update(descricao: set_html_safe(proposta_params[:descricao]))
       render json: @proposta
     else
       render json: @proposta.errors, status: :unprocessable_entity
@@ -43,6 +45,10 @@ class PropostasController < ApplicationController
   def destroy
     @proposta.destroy
     render json: @proposta
+  end
+
+  def set_html_safe(str)
+    str = ActionView::Base.full_sanitizer.sanitize(str)
   end
 
   private
