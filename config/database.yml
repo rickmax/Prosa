@@ -15,14 +15,11 @@ default: &default
   pool: 5
   username: root
   password:
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
   database: prosa_development
-  # socket: /var/run/mysqld/mysql.sock #ubuntu
-  # socket: /var/mysql/mysql.sock
-  sock: /var/run/mysqld/mysqld.sock
-  # socket: /tmp/mysql.sock #mac
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -46,13 +43,12 @@ test:
 #   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
 #
 # You can use this database configuration with:
-#
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+
+  production:
+    url: <%= ENV['DATABASE_URL'] %>
 #
 production:
   <<: *default
   database: prosa_production
   username: prosa
   password: <%= ENV['PROSA_DATABASE_PASSWORD'] %>
-  database: ENV['DATABASE_URL']
