@@ -50,4 +50,4 @@ production:
   username: prosa
   password: <%= ENV['PROSA_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
-  socket: /var/run/mysqld/mysql.sock
+  # socket: /var/run/mysqld/mysql.sock
