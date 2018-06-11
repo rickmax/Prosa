@@ -26,6 +26,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  adapter: mysql2
   database: prosa_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -46,12 +47,11 @@ test:
 
 production:
   <<: *default
-  adapter: postgres
+  adapter: postgresql
   database: prosa_production
   username: prosa
   password: <%= ENV['PROSA_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
-  # socket: /var/run/mysqld/mysql.sock
   database: ENV['CLEARDB_DATABASE_URL']
   username: ENV['CLEARDB_DATABASE_USERNAME']
   password: ENV['CLEARDB_DATABASE_PASSWORDs']
