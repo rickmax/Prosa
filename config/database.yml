@@ -20,7 +20,9 @@ development:
   <<: *default
   database: prosa_development
   # socket: /var/run/mysqld/mysql.sock #ubuntu
-  socket: /tmp/mysql.sock #mac
+  # socket: /var/mysql/mysql.sock
+  sock: /var/run/mysqld/mysqld.sock
+  # socket: /tmp/mysql.sock #mac
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
