@@ -19,6 +19,7 @@ default: &default
 development:
   <<: *default
   database: prosa_development
+  # socket: /var/run/mysqld/mysql.sock #ubuntu
   socket: /tmp/mysql.sock #mac
 
 # Warning: The database defined as "test" will be erased and
@@ -52,4 +53,4 @@ production:
   database: prosa_production
   username: prosa
   password: <%= ENV['PROSA_DATABASE_PASSWORD'] %>
-  socket: /var/run/mysqld/mysql.sock #ubuntu
+  database: ENV['DATABASE_URL']
