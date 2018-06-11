@@ -1,28 +1,29 @@
-== README
+# Propostas API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API Rest de gerenciamento de propostas Prosa.
+ruby -> 2.4.1
+rails -> 4.2.10
 
-Things you may want to cover:
+## Instalação
 
-* Ruby version
+Após clonar o repositório, rode em seu console:
 
-* System dependencies
+```ruby
+bundle install
+```
 
-* Configuration
+```ruby
+rake db:create db:migrate db:seed
+```
+## Banco de Dados
 
-* Database creation
+MySQL -> Development
+Postgresql -> Produção
 
-* Database initialization
+# Developer
 
-* How to run the test suite
+[Henrique Max](https://github.com/rickmax)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Licença
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Está Gem esta disponível sob ostermos de licença [MIT License](http://opensource.org/licenses/MIT).
